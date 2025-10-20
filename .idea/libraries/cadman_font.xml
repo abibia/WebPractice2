@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cadman-font">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web dev practive/assets/cadman-font.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
