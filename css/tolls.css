@@ -1,0 +1,521 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Style the navigation bar */
+
+.actionBar {
+  padding: 12px 0;
+  position: fixed;
+  right: 5px;
+  top: 0;
+}
+
+.navigationBar {
+    width: clamp(250px, 80vw, 80%);
+    height: 50px;
+    margin: clamp(0%, 5vw, 10px);
+    overflow: hidden;
+    border-radius: 100px;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+ .navigationBar a {
+      float: left; /* Float links side by side */
+      text-align: center; /* Center-align text */
+      width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+      padding: 12px 0; /* Some top and bottom padding */
+      font-size: 150%; /* Increased font size */
+      color: inherit;
+      font-family: 'Cadman', sans-serif;
+      font-weight: bold;
+ }
+ .navigationBar a:hover {
+     transform: scale(1.3);
+ }
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("galery"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .navigationBar {
+        flex-direction: column;
+    width: 100px;
+        height: 50px;
+    }
+  .navigationBar a {display: none;}
+  .navigationBar a.icon {
+      background: url("../assets/menu.svg") no-repeat center/cover;
+      background-position-x: 10px;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      height: 45%;
+      display: block;
+
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .navigationBar.responsive {
+      position: relative;
+      float: left;
+      background-color: inherit;
+      width: 250px;
+      height: auto;
+      margin: clamp(0%, 5vw, 10px);
+      overflow: visible;
+      border-radius: 20px;
+  }
+  .navigationBar.responsive a.icon {
+    position: absolute;
+      background: url("../assets/close.svg") no-repeat center/cover;
+      background-color: #afcbc4;
+      border-radius: 20%;
+      transform: scale(0.2);
+      right: -45px;
+      top: -45px;
+
+  }
+  .navigationBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+      color: inherit;
+      padding: 12px 16px;
+      text-decoration: none;
+      text-align: left;
+  }
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        background-color: #inherit;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .drop-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+  .navigationBar.responsive a.icon:hover .drop-content{
+          display: block;
+      }
+}
+
+.userB {                border: none;
+                        background: url("../assets/login.svg") no-repeat center/cover;
+                        padding: 10px 10px;
+                        width: 40px;
+                        height: 40px;
+                        color: white;
+                        cursor: pointer;
+                        object-fit: cover;
+                        border-radius: 50%;
+                      }
+.userB:hover {
+                        transform: scale(1.2);
+                        filter: saturate(130%);
+                      }
+ .accessB {                border: none;
+                         background: url("../assets/accecibility.svg") no-repeat center/cover;
+                         padding: 10px 10px;
+                         width: 40px;
+                         height: 40px;
+                         color: white;
+                         cursor: pointer;
+                         object-fit: cover;
+                         border-radius: 50%;
+                       }
+ .accessB:hover {
+                         transform: scale(1.2);
+                         filter: saturate(130%);
+                       }
+
+/* Style the buttons that are used to open and close the accordion panel */
+/* Container for accordion items */
+.accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: inherit;
+}
+
+/* Each accordion item (button + panel wrapper) */
+.accordion-item {
+    width: calc(50% - 5px);
+    display: flex;
+    flex-direction: column;
+    background: inherit;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Cadman', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0;
+    border-radius: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    width: 90%;
+    padding: 0 18px;
+    border-radius: 10px;
+    background: inherit;
+    display: none;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+.homeContent {
+    width: 100%;
+    align-self: center;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.commissions {
+    background: url("../assets/placeholder.svg") no-repeat center/cover;
+    padding: 100px 100px;
+}
+
+.homescroll {
+    background: url("../assets/homeplaceholder.svg") no-repeat center/cover;
+
+}
+
+.ComB {
+    flex: 0 1 auto;
+    max-width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: none;
+    background: #b12b2b;
+    color: white;
+    cursor: pointer;
+    font-family: 'Cadman', sans-serif;
+    font-weight: bold;
+    height: 100px;
+    width: clamp(220px, 40vw, 200%);
+    border-radius: 25px;
+    font-size: 250%;
+
+}
+
+.ComB:hover {
+    transform: scale(1.2);
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.welcomeBox {
+    flex: 0.2 1 300px;
+    min-width: 300px;
+    background: #489d88;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    height: 300px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.titles {
+    color: inherit;
+    font-size: 300%;
+    background: rgba(36, 154, 84, 0.5);
+    text-align: center;
+}
+
+/* Base class for all commission offer buttons */
+.offerButton {
+    border: none;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10px;
+    width: 200px;
+    height: 200px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30%;
+    font-family: 'Cadman', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.offerButton:hover {
+    filter: saturate(50%);
+    filter: brightness(50%);
+    transform: scale(0.9);
+}
+
+/* Individual button background images */
+.streamB {
+    background-image: url("../assets/stream.png");
+}
+
+.vtuberB {
+    background-image: url("../assets/vtuber.gif");
+}
+
+.canvasB {
+    background-image: url("../assets/canvas.jpg");
+}
+
+.digitalB {
+    background-image: url("../assets/digital illustration.png");
+}
+
+.blockmenchB {
+    background-image: url("../assets/blockbench.webp");
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*galery style*/
+
+.galery-button {
+    border: none;
+    align-content: space-evenly;
+    background-color: #489d88;
+    border-radius: 20%;
+    fount-weight: bold;
+    font-size: medium;
+    height: 50px;
+    width: 100px;
+    padding: 10px 10px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Cadman', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* code foro future galery buttons
+      <div id="button-container">
+          <button class="Gbuttons active" onclick="filterSelection('all')"> Show all</button>
+          <button class="Gbuttons" onclick="filterSelection('digital')"> Nature</button>
+          <button class="Gbuttons" onclick="filterSelection('canvas')"> Cars</button>
+          <button class="Gbuttons" onclick="filterSelection('other')"> People</button>
+      </div> */
+
+.galery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.galery-row,
+.galery-row > .galery-column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.galery-column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.galery-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.galery-content {
+    background-color: inherit;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .galery-column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .galery-column {
+        width: 100%;
+    }
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.contact-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.contact-column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.contact-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .contact-column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.footer {
+    background-color: #489d88;
+    color: white;
+    padding: 10px;
+    font-family: 'Cadman', sans-serif;
+    font-weight: bold;
+    display: block;
+
+}
+
+.B {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.B:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.abibia-Youtube {
+    background: inherit;
+    color: white;
+}
+
+/* Twitter */
+.abibia-twitter {
+    background: #55ACEE;
+    color: white;
+}
