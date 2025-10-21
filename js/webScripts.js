@@ -69,4 +69,12 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+function imageSwapAnimation() {
+    const image = document.getElementById("image");
+    const image2 = document.getElementById("image2");
+    const image3 = document.getElementById("image3");
+    const image4 = document.getElementById("image4");
 
+
+
+}

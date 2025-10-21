@@ -76,7 +76,7 @@ html {
   .navigationBar.responsive a.icon {
     position: absolute;
       background: url("../assets/close.svg") no-repeat center/cover;
-      background-color: #afcbc4;
+      background: #afcbc4;
       border-radius: 20%;
       transform: scale(0.2);
       right: -45px;
@@ -90,15 +90,15 @@ html {
       color: inherit;
       padding: 12px 16px;
       text-decoration: none;
-      text-align: left;
+
   }
 
     .drop-content {
         display: none;
         position: absolute;
-        background-color: #inherit;
+        background-color: inherit;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
     }
 
@@ -306,7 +306,6 @@ html {
 
 .offerButton:hover {
     filter: saturate(50%);
-    filter: brightness(50%);
     transform: scale(0.9);
 }
 
@@ -376,7 +375,15 @@ html {
     letter-spacing: 1px;
 }
 
-/* code foro future galery buttons
+.about-container {
+    background: url("../assets/slimy.png") no-repeat center/cover;
+}
+
+.about-container:hover {
+    transition: .5s ease;
+}
+
+/* code for future galery buttons
       <div id="button-container">
           <button class="Gbuttons active" onclick="filterSelection('all')"> Show all</button>
           <button class="Gbuttons" onclick="filterSelection('digital')"> Nature</button>
