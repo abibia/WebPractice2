@@ -2,7 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body {
+    margin: 0;
+}
 
 /* Style the navigation bar */
 
@@ -364,7 +366,7 @@ html {
     align-content: space-evenly;
     background-color: #489d88;
     border-radius: 20%;
-    fount-weight: bold;
+    font-weight: bold;
     font-size: medium;
     height: 50px;
     width: 100px;
@@ -376,12 +378,23 @@ html {
 }
 
 .about-container {
-    background: url("../assets/slimy.png") no-repeat center/cover;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.about-container:hover {
-    transition: .5s ease;
+.about-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
 }
+
+.about-container img:first-child {
+    position: relative; /* First image creates the height */
+}
+
 
 /* code for future galery buttons
       <div id="button-container">
@@ -462,7 +475,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .contact-container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: inherit;
     padding: 10px;
 }
 
@@ -517,8 +530,13 @@ input[type=submit]:hover {
 
 /* Facebook */
 .abibia-Youtube {
-    background: inherit;
-    color: white;
+    background-image: url("../assets/YT.png");
+    background-size: cover;
+    padding: 10px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
 }
 
 /* Twitter */
