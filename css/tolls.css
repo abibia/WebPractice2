@@ -2,7 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body {
+    margin: 0;
+}
 
 /* Style the navigation bar */
 
@@ -76,7 +78,7 @@ html {
   .navigationBar.responsive a.icon {
     position: absolute;
       background: url("../assets/close.svg") no-repeat center/cover;
-      background-color: #afcbc4;
+      background: #afcbc4;
       border-radius: 20%;
       transform: scale(0.2);
       right: -45px;
@@ -90,15 +92,15 @@ html {
       color: inherit;
       padding: 12px 16px;
       text-decoration: none;
-      text-align: left;
+
   }
 
     .drop-content {
         display: none;
         position: absolute;
-        background-color: #inherit;
+        background-color: inherit;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
     }
 
@@ -306,7 +308,6 @@ html {
 
 .offerButton:hover {
     filter: saturate(50%);
-    filter: brightness(50%);
     transform: scale(0.9);
 }
 
@@ -365,7 +366,7 @@ html {
     align-content: space-evenly;
     background-color: #489d88;
     border-radius: 20%;
-    fount-weight: bold;
+    font-weight: bold;
     font-size: medium;
     height: 50px;
     width: 100px;
@@ -376,7 +377,26 @@ html {
     letter-spacing: 1px;
 }
 
-/* code foro future galery buttons
+.about-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.about-container img:first-child {
+    position: relative; /* First image creates the height */
+}
+
+
+/* code for future galery buttons
       <div id="button-container">
           <button class="Gbuttons active" onclick="filterSelection('all')"> Show all</button>
           <button class="Gbuttons" onclick="filterSelection('digital')"> Nature</button>
@@ -455,7 +475,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .contact-container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: inherit;
     padding: 10px;
 }
 
@@ -510,8 +530,13 @@ input[type=submit]:hover {
 
 /* Facebook */
 .abibia-Youtube {
-    background: inherit;
-    color: white;
+    background-image: url("../assets/YT.png");
+    background-size: cover;
+    padding: 10px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
 }
 
 /* Twitter */

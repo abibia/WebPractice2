@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/WebPractice.iml" filepath="$PROJECT_DIR$/.idea/WebPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebDevPractice.iml" filepath="$PROJECT_DIR$/.idea/WebDevPractice.iml" />
     </modules>
   </component>
 </project>
