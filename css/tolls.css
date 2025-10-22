@@ -4,6 +4,8 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 /* Style the navigation bar */
@@ -379,22 +381,34 @@ body {
 
 .about-container {
     position: relative;
-    width: 100%;
-    margin: 0 auto;
+    min-height: fit-content;
+}
+
+.rightUpText {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-size: clamp(16px, 4vw, 20px); /* Responsive font size */
+    font-family: 'Cadman', sans-serif;
+    font-weight: bold;
+    z-index: 5;
 }
 
 .about-container img {
     position: absolute;
-    top: 0;
-    left: 0;
+
     width: 100%;
-    height: auto;
+    height: clamp(200px, 80vh, 800px); /* Responsive height */
+    object-fit: cover;
+    z-index: -4;
 }
 
 .about-container img:first-child {
-    position: relative; /* First image creates the height */
+    position: relative;
+    z-index: 1;
 }
-
 
 /* code for future galery buttons
       <div id="button-container">
@@ -477,6 +491,7 @@ input[type=submit]:hover {
     border-radius: 5px;
     background-color: inherit;
     padding: 10px;
+
 }
 
 /* Create two columns that float next to eachother */
