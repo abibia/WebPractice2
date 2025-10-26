@@ -266,6 +266,9 @@ body {
     border-radius: 5px;
     background-color: inherit;
     padding: 10px;
+    margin: 10px auto;
+    display: flex;
+
 }
 
 .contact-column {
@@ -310,7 +313,7 @@ th {
 
 td {
 
-    border-inline: 2px solid black;
+    border-inline: 2px solid lightseagreen;
     border-collapse: collapse;
     padding: 15px;
 }
@@ -547,4 +550,24 @@ td {
 .abibia-twitter {
     background: #55ACEE;
     color: white;
+}
+
+.review-container {
+justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+}
+
+.review-content {
+    background-color: inherit;
+    border-radius: 10px;
+    width: 15%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
 }
