@@ -33,3 +33,7 @@ body {
 .active, .accordion:hover .accordion:focus {
     background: darkslategray;
 }
+
+.review-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
