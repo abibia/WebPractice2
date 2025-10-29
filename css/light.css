@@ -20,7 +20,7 @@ body {
                object-fit: cover;
                border-radius: 50%;
              }
-.lightDarkB:hover, lightDarkB:focus {
+.lightDarkB:hover, .lightDarkB:focus {
                transform: scale(1.2);
                filter: saturate(130%);
              }
