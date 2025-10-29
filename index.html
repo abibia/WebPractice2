@@ -20,7 +20,7 @@
     <button class="accessB" type="button" aria-label="Acessibilities conifg"></button>
   </div>
 
-  <nav class="navigationBar" id="myTopnav">
+  <nav class="navigationBar" id="myTopnav" role="menubar">
       <a href="galery.html">Galery</a>
       <a href="#FAQ">FAQ</a>
       <a href="#shop">Shop</a>
@@ -30,7 +30,7 @@
   </nav>
 <main>
   <section id="home" class="homeContent">
-    <div class="welcomeBox" id="welcomeBox" role="banner">
+    <div class="welcomeBox" id="welcomeBox" role="article">
       <h2>Welcome!</h2>
       <p>I am Abibia Berri a commission artist focused on customization and multiple mediums to help bring your ideas to life! <br>
         From acrylic paintings to emotes, overlays, VTuber assets, and game art.<br>
@@ -38,9 +38,9 @@
         Got an Idea? Click the button to open a commission and make it real!
       </p>
     </div>
-      <aside id="comission" class="commissions"><button class="ComB" >Comission</button></aside>
+      <div id="comission" class="commissions"><button class="ComB" >Comission</button></div>
       <div class="homescroll" id="homescroll" role="article">
-        <div style= "width: 100%;" id="offerBox" role="button">
+        <div style= "width: 100%;" id="offerBox">
         <h2 class="titles" > Comission offers</h2>
              <div class="buttons" ID="offerButtons">
 
@@ -57,7 +57,7 @@
           <div class="galery-column">
               <div class="galery-content">
                   <img src="assets/galery/abstractbubbles.jpg" alt="abstractbubbles" style="width:100%">
-                  <p class="bold" role="heading">Piece Name</p>
+                  <p class="bold" role="heading" aria-label="Piecename">Piece Name</p>
                   <p>Description of the art. aka, materials, purpose etc...</p>
               </div>
           </div>
@@ -67,17 +67,17 @@
     <h2 class="titles">Reviews</h2>
     <div class="review-container">
             <div class="review-content">
-                <p class="bold" role="heading">User Name</p>
+                <p class="bold" role="heading" aria-label="username">User Name</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
 
              </div>
         <div class="review-content">
-            <p class="bold" role="heading">User Name</p>
+            <p class="bold" role="heading" aria-label="username">User Name</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
 
         </div>
         <div class="review-content">
-            <p class="bold" role="heading">User Name</p>
+            <p class="bold" role="heading" aria-label="username">User Name</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
 
         </div>
@@ -88,6 +88,10 @@
      <div id="how it works">
 
          <h2 class="titles">How it works</h2>
+
+
+
+
      </div>
       </div>
   </section>
