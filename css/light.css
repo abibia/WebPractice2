@@ -7,6 +7,8 @@ body {
 }
 
 .navigationBar {  filter: brightness(0.9); box-shadow: 0 1px 5px #071c1a;}
+.userB {  filter: brightness(0.9); box-shadow: 0 1px 10px #071c1a;}
+.accessB {  filter: brightness(0.9); box-shadow: 0 1px 10px #071c1a;}
 
 
 .lightDarkB {  border: none;
@@ -18,11 +20,11 @@ body {
                object-fit: cover;
                border-radius: 50%;
              }
-.lightDarkB:hover {
+.lightDarkB:hover, .lightDarkB:focus {
                transform: scale(1.2);
                filter: saturate(130%);
              }
 
-.active, .accordion:hover {
+.active, .accordion:hover, .accordion:focus{
     background: grey;
 }
