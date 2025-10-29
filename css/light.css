@@ -20,11 +20,11 @@ body {
                object-fit: cover;
                border-radius: 50%;
              }
-.lightDarkB:hover {
+.lightDarkB:hover, lightDarkB:focus {
                transform: scale(1.2);
                filter: saturate(130%);
              }
 
-.active, .accordion:hover {
+.active, .accordion:hover, .accordion:focus{
     background: grey;
 }

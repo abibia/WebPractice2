@@ -15,7 +15,7 @@
                object-fit: cover;
                border-radius: 50%;
              }
-.lightDarkB:hover {
+.lightDarkB:hover, .lightDarkB:focus {
                transform: scale(1.2);
                filter: saturate(130%);
              }
@@ -30,6 +30,6 @@ body {
 
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active, .accordion:hover .accordion:focus {
     background: darkslategray;
 }
