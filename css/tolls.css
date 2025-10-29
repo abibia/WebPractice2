@@ -33,6 +33,46 @@ body {
     font-weight: bold;
 }
 
+/* Navigation Bar Styles */
+.navigationBar {
+  display: flex;
+  /* Add your base styles here */
+}
+
+/* Hide the hamburger icon by default */
+.navigationBar .icon {
+  display: none;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 768px) {
+  .navigationBar a {
+    display: none; /* Hide all links */
+  }
+  
+  .navigationBar .icon {
+    display: block; /* Show hamburger icon */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* When responsive class is added, show the links */
+  .navigationBar.responsive {
+    position: relative;
+  }
+  
+  .navigationBar.responsive a {
+    display: block; /* Show links vertically */
+  }
+  
+  .navigationBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .navigationBar a:hover,
 .navigationBar a:focus{
     transform: scale(1.3);
