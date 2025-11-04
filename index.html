@@ -19,7 +19,7 @@
     <button class="userB" type="button" aria-label="User conifg"></button>
     <button class="accessB" type="button" aria-label="Acessibilities conifg"></button>
   </div>
-
+<div class="logo">  <button class="catLogo" aria-label="abibia Logo" onclick="location.href='https://www.youtube.com/@abibia_'""> </button></div>
   <nav class="navigationBar" id="myTopnav" role="navigation">
       <a href="galery.html">Galery</a>
       <a href="#FAQ">FAQ</a>
@@ -42,13 +42,13 @@
       <div class="homescroll" id="homescroll" role="article">
         <div style= "width: 100%;" id="offerBox">
         <h2 class="titles" > Comission offers</h2>
-             <div class="buttons" ID="offerButtons">
+             <div class="offerContent" ID="offerButtons">
 
-             <button class="offerButton canvasB" type="button" aria-label="canvas">canvas painting</button>
-             <button class="offerButton vtuberB" type="button" aria-label="vtuber">vtuber models</button>
-                 <button class="offerButton streamB" type="button" aria-label="emotes"> stream assets</button>
-            <button class="offerButton digitalB" type="button" aria-label="digital ilustrairon" >digital illustration</button>
-            <button class="offerButton blockmenchB" type="button" aria-label="blockbench">blockbench models</button>
+             <button class="offerButton canvasB" type="button" aria-label="canvas">canvas painting <p class="red"> +100€</p> </button>
+             <button class="offerButton vtuberB" type="button" aria-label="vtuber">vtuber models <p class="red"> +500€</p> </button>
+                 <button class="offerButton streamB" type="button" aria-label="emotes"> stream assets <p class="red">+10€</p> </button>
+            <button class="offerButton digitalB" type="button" aria-label="digital ilustrairon" >digital illustration <p class="red">+10€</p> </button>
+            <button class="offerButton blockmenchB" type="button" aria-label="blockbench">blockbench models <p class="red">+20€</p> </button>
              </div>
         </div>
 
@@ -61,7 +61,7 @@
                           <p style="margin: 0; padding: 5px 10px 10px 10px;">Description of the art. aka, materials, purpose etc...</p>
                       </div>
                   </div>
-              <button class="galery-button" onclick="location.href='#galery'"> See More</button>
+              <button class="galery-button" onclick="location.href='galery.html'"> See More</button>
           </div>
 <div id="reviews">
     <h2 class="titles">Reviews</h2>
@@ -238,14 +238,12 @@
   <section id="contact">
       <div class="contact-container">
           <div style="text-align:center">
-              <h2>Contact Us</h2>
+              <h2 class="titles">Contact Us</h2>
               <p>Swing by for a cup of coffee, or leave us a message:</p>
           </div>
           <div class="contact-row">
               <div class="contact-column">
                   <img src="assets/placeholder.svg" style="width:100%" alt="placeholder">
-              </div>
-              <div class="contact-column">
                   <form > <!-- add action later> -->
                       <label for="email">Email</label>
                       <input type="text" id="email" name="email" placeholder="Your email.." aria-label="email">
