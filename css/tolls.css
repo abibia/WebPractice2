@@ -1,15 +1,24 @@
-html, body {
+html{
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
+    font-family: 'Cadman', sans-serif;
+    font-size: 100%;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+    flex: 1;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+
 }
 
-.galeryContent{
+.mainContent{
     background-color: inherit;
     margin-top: 100px;
     justify-content: center;
@@ -324,7 +333,7 @@ body {
 }
 .red {
     color: rgba(255, 190, 190, 1);
-    text-shadow: 0px 0px 5px rgba(0, 40, 40, 1);
+    text-shadow: 0 0 5px rgba(0, 40, 40, 1);
 }
 
 .offerButton:hover,
@@ -364,7 +373,7 @@ body {
 .galery-button {
     border: none;
     align-content: space-evenly;
-    background-color: #204639;
+    background-color: darkred;
     border-radius: 20%;
     font-weight: bold;
     font-size: 150%;
@@ -513,7 +522,7 @@ td {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: darkred;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -568,10 +577,7 @@ td {
     font-family: 'Cadman', sans-serif;
     font-weight: bold;
     width: 100%;
-    padding: 20px 0; /* Add padding for better spacing */
-    text-align: center; /* Center the content */
-    margin-top: auto; /* Push footer to bottom in flexbox layout */
-    /* Remove position: absolute and bottom: 0 */
+    text-align: center;
 }
 
 .B {
