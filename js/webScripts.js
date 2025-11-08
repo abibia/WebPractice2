@@ -78,13 +78,12 @@ function imageSwapAnimation() {
     const image4 = document.getElementById("image4");
 
     const images = [image, image2, image3, image4].filter(img => img);
-    
+
     if (images.length < 2) return; // Need at least 2 images to swap
-    
+
     // Store all the image sources in an array
     const allSources = images.map(img => img.src);
-    
-    images.forEach(img => {
+
         img.addEventListener('mouseenter', () => {
             // Fade out all images
             images.forEach(i => {

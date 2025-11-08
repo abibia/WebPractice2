@@ -6,9 +6,9 @@ body {
   font-family: 'Cadman', sans-serif;
 }
 
-.navigationBar {  filter: brightness(0.9); box-shadow: 0 1px 5px #071c1a;}
-.userB { filter: brightness(0.8); box-shadow: 0 1px 10px #071c1a; background-color: rgba(255, 255, 255, 0.2)!important;}
-.accessB { filter: brightness(0.8); background-color: rgba(255, 255, 255, 0.1)!important; box-shadow: 0 1px 10px #071c1a;}
+.navigationBar {  filter: brightness(0.9); box-shadow: 3px 3px 0px #071c1a;}
+.userB { filter: brightness(0.7);}
+.accessB { filter: brightness(0.7);}
 
 
 .lightDarkB {  border: none;

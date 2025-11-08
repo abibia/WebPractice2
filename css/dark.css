@@ -1,8 +1,8 @@
 
 
-.navigationBar {  filter: brightness(1.4); box-shadow: 0 1px 5px #489d88;}
-.userB {  filter: brightness(1.4); box-shadow: 0 1px 10px#489d88;}
-.accessB {  filter: brightness(1.4); box-shadow: 0 1px 10px #489d88;}
+.navigationBar {  filter: brightness(1.4); box-shadow: 3px 3px 0px #489d88;}
+.userB {  filter: brightness(1.4);}
+.accessB {  filter: brightness(1.4);}
 
 
 
