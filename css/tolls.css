@@ -370,25 +370,94 @@ body {
 }
 
 /* Gallery Styles */
-.galery-button {
+.galleryButton {
     border: none;
     align-content: space-evenly;
     background-color: darkred;
     border-radius: 20%;
     font-weight: bold;
     font-size: 150%;
-    width: 10%;
+    width: clamp(100px, 20vw, 200px);
     padding: 10px 10px;
     color: white;
     cursor: pointer;
     font-family: 'Cadman', sans-serif;
 }
 
-
-.galery-content {
-    background-color: inherit;
-    padding: 10px;
+.galleryButton:hover,
+.galleryButton:focus {
+    background-color: #555;
+    transform: scale(0.9);
 }
+
+/* Gallery CSS */
+.gallery { /* Container for the entire gallery grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+}
+.gallery-item {
+    display: block;
+    width: calc(25% - 20px);
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.gallery-item .image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.gallery-item picture {
+    display: block;
+    width: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.gallery-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #cccccc;
+    margin: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+    transform: scale(1.1);
+}
+
+/* Responsive gallery */
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
+}
+
 
 /* Contact Form Styles */
 .contact-container .contact-row {
@@ -632,43 +701,3 @@ justify-content: center;
     font-size: 150%;
 }
 
-.galery-container{
-    justify-content: center;
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.galery-content {
-    width: 450px;
-    height: 450px;
-    padding: 10px;
-    margin: 10px;
-    overflow: hidden;
-    color: #cccccc;
-    justify-items: center;
-    position: relative;
-
-
-
-}
-.galery-content p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #cccccc;
-
-}
-.galery-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    z-index: -50;
-}
-
-.galery-content .bold {
-    padding: 1px 1px 15px 150px;
-}

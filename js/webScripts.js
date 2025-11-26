@@ -18,10 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (themeButton) {
         themeButton.onclick = toggleTheme;
     }
-    
+
+    // Initialize scroll button
+    const mybutton = document.getElementById("topBtn");
+    if (mybutton) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+    }
+
     // Initialize image swap animation
     imageSwapAnimation();
-})
+});
 
 const acc = document.getElementsByClassName("accordion");
 let i;
@@ -78,12 +90,13 @@ function imageSwapAnimation() {
     const image4 = document.getElementById("image4");
 
     const images = [image, image2, image3, image4].filter(img => img);
-    
+
     if (images.length < 2) return; // Need at least 2 images to swap
-    
+
     // Store all the image sources in an array
     const allSources = images.map(img => img.src);
-    
+
+    // Add this line that was missing!
     images.forEach(img => {
         img.addEventListener('mouseenter', () => {
             // Fade out all images
@@ -91,18 +104,18 @@ function imageSwapAnimation() {
                 i.style.transition = 'opacity 0.3s ease-in-out';
                 i.style.opacity = '0';
             });
-            
+
             // Rotate images halfway through fade
             setTimeout(() => {
                 // Shift sources: last image becomes first
                 const lastSource = allSources.pop();
                 allSources.unshift(lastSource);
-                
+
                 // Apply new sources
                 images.forEach((img, index) => {
                     img.src = allSources[index];
                 });
-                
+
                 // Fade in all images
                 images.forEach(i => {
                     i.style.opacity = '1';
@@ -111,3 +124,5 @@ function imageSwapAnimation() {
         });
     });
 }
+
+la

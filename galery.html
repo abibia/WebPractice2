@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<link  id="theme-link" rel="stylesheet" href="css/light.css">
-<link  id="tollsCss" rel="stylesheet" href="css/tolls.css">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/png" href="assets/profilecat.png">
     <title>Abibia's Comission Page</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script src="js/webScripts.js" defer></script>
+    <link id="theme-link" rel="stylesheet" href="css/light.css">
+    <link id="tollsCss" rel="stylesheet" href="css/tolls.css">
+    <script src="js/webScripts.js"></script>
+    <script src="js/galery.js"></script>
 </head>
-
+<body>
 <button onclick="topFunction()" id="topBtn" title="Go to top" aria-label="Back to top">Top</button>
 <div class="actionBar">
-    <button class="lightDarkB" type="button" aria-label="Toggle theme" ></button>
+    <button class="lightDarkB" type="button" aria-label="Toggle theme"></button>
     <button class="userB" type="button" aria-label="User conifg"></button>
     <button class="accessB" type="button" aria-label="Acessibilities conifg"></button>
 </div>
-<div class="logo">  <button class="catLogo" aria-label="abibia Logo" onclick="location.href='https://www.youtube.com/@abibia_'"> </button></div>
+<div class="logo">
+    <button class="catLogo" aria-label="abibia Logo" onclick="location.href='https://www.youtube.com/@abibia_'"></button>
+</div>
 <nav class="navigationBar" id="myTopnav" role="navigation">
     <a href="index.html">Home</a>
     <a href="index.html#FAQ">FAQ</a>
@@ -27,42 +29,18 @@
     <a href="javascript:void(0);" class="icon" onclick="navigationBar()" aria-label="See more"></a>
 </nav>
 
-<body>
-<section id="galery" class="mainContent">
-    <h2 class="titles">Galery</h2>
-    <div class="galery-container">
-            <div class="galery-content">
-                <img src="assets/galery/abstractbubbles.jpg" alt="abstractbubbles" style="width:100%">
-                <h3>My Work</h3>
-                <p>Lorem ipsum..</p>
-        </div>
-
-            <div class="galery-content">
-                <img src="assets/galery/abstrakte.jpg" alt="abstrakte" style="width:100%">
-                <h3>My Work</h3>
-                <p>Lorem ipsum..</p>
-            </div>
-
-            <div class="galery-content">
-                <img src="assets/galery/canvas1.jpg" alt="canvas1" style="width:100%">
-                <h3>My Work</h3>
-                <p>Lorem ipsum..</p>
-            </div>
-
-            <div class="galery-content">
-                <img src="assets/galery/snail%20sculpture.jpg" alt="snail sculpture" style="width:100%">
-                <h3>My Work</h3>
-                <p>Lorem ipsum..</p>
-            </div>
-
-        <!-- END MAIN -->
-    </div>
-
+<section id="gallery" class="mainContent">
+    <h2 class="titles">Gallery</h2>
+    <button class="galleryButton" alt="Painting" onclick="fetchImages('painting')">Painting</button>
+    <button class="galleryButton" alt="Emote" onclick="fetchImages('emote')">Emote</button>
+    <button class="galleryButton" alt="VTuber" onclick="fetchImages('vtuber')">VTuber</button>
+    <button class="galleryButton" alt="Game" onclick="fetchImages('game')">Game</button>
+    <button class="galleryButton" alt="Illustration" onclick="fetchImages('illustration')">Illustration</button>
+    <div class="gallery"></div>
+    <div class="gallery"></div>
 </section>
 
-</body>
-
-<footer class="footer"  role="contentinfo">
+<footer class="footer" role="contentinfo">
     <p>Terms of service<br> privacy policy</p>
     <a href="https://www.youtube.com/@abibia_"
        class="abibia-Youtube"
@@ -71,4 +49,5 @@
     </a>
 </footer>
 
+</body>
 </html>
