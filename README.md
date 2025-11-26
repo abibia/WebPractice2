@@ -1,5 +1,5 @@
 # WebPractice
-HTML and CSS practice, may also add MSQL later. Uses a art Komission shop as template as  I already have lots of assets for that.
+HTML and CSS practice, may also add MSQL later. Uses a art Comission shop as template as  I already have lots of assets for that.
 
 ## Built With
 - HTML5
