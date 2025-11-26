@@ -1,43 +1,51 @@
-const folderPath = "assets/gallery/";
+// Fetch images from API
+function fetchImages(filterWord) {
+    fetch('/api/images')
+        .then(response => response.json())
+        .then(data => {
+            const gallery = document.querySelector('.gallery');
+            const filteredImages = data.images.filter(imageName => {
+                const lowerCaseName = imageName.toLowerCase();
+                const lowerFilterWord = filterWord.toLowerCase();
+                return lowerCaseName.startsWith(lowerFilterWord);
+            });
 
-// Function to open images in a new tab
-function openImage(src) {
-    window.open(src, "_blank");
+            gallery.innerHTML = '';
+
+            filteredImages.forEach(imageName => {
+                // Create gallery-item div
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+
+                // Create a wrapper for picture and caption
+                const imageWrapper = document.createElement('div');
+                imageWrapper.className = 'image-wrapper';
+                imageWrapper.style.position = 'relative';
+                imageWrapper.style.display = 'inline-block';
+
+                // Create picture element
+                const picture = document.createElement('picture');
+
+                // Create img element
+                const img = document.createElement('img');
+                const imgSrc = `/uploads/${imageName}`;
+                img.src = imgSrc;
+                img.alt = String(imageName);
+                // Make image clickable to open in new tab
+                galleryItem.onclick = () => window.open(imgSrc, "_blank");
+                galleryItem.style.cursor = 'pointer';
+
+                // Create caption
+                const caption = document.createElement('p');
+                caption.textContent = imageName.replace(/\.[^/.]+$/, '');
+
+                // Assemble the structure
+                picture.appendChild(img);
+                imageWrapper.appendChild(picture);
+                imageWrapper.appendChild(caption);
+                galleryItem.appendChild(imageWrapper);
+                gallery.appendChild(galleryItem);
+            });
+        })
+        .catch(error => console.error('Error loading images:', error));
 }
-
-// Function to load gallery dynamically from Node.js API
-async function loadGallery() {
-    try {
-        const res = await fetch("/api/gallery"); // Ask backend for image list
-        const images = await res.json();
-
-        const container = document.getElementById("galleryContainer");
-        container.innerHTML = "";
-
-        images.forEach(img => {
-            const div = document.createElement("div");
-            div.classList.add("gallery-item");
-            div.onclick = () => openImage(folderPath + img);
-
-            // Optional: Make a nicer title from filename
-            const title = img
-                .replace(/\.[^/.]+$/, "") // remove file extension
-                .replace(/[_-]/g, " ")    // replace underscores/dashes with spaces
-                .replace(/\b\w/g, c => c.toUpperCase()); // capitalize words
-
-            div.innerHTML = `
-        <picture>
-          <img src="${folderPath + img}" alt="${title}">
-        </picture>
-        <p>${title}</p>
-      `;
-
-            container.appendChild(div);
-        });
-    } catch (err) {
-        console.error("Failed to load gallery:", err);
-    }
-}
-
-// Run when DOM is ready
-document.addEventListener("DOMContentLoaded", loadGallery);
