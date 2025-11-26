@@ -16,7 +16,7 @@ Visit: https://abibia.github.io/webpractice/
 - Spring Web
 
 ## Copyright
-© 2025 [Your Name]. All rights reserved.
+© 2025 Abibia. All rights reserved.
 This project contains original assets and code. Please do not use without permission.
 
 ## Contact
