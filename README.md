@@ -14,6 +14,9 @@ Visit: https://abibia.github.io/webpractice/
 - A functional Home, galery, FAQ, Shop, About, Contact
 - Darkmode, screenreader,high contrast, reduced animation, zoom, keyboard only, mobile compatible.
 - Spring Web
+- nodejs server for image upload
+- cat npc for funsies
+- live chat for feedback 
 
 ## Copyright
 © 2025 Abibia. All rights reserved.
