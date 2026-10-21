@@ -14,25 +14,188 @@
 <button onclick="topFunction()" id="topBtn" title="Go to top" aria-label="Back to top">Top</button>
 <div class="actionBar">
     <button class="lightDarkB" type="button" aria-label="Toggle theme" ></button>
-    <button class="userB" type="button" aria-label="User conifg"></button>
     <button class="accessB" type="button" aria-label="Acessibilities conifg"></button>
 </div>
 <div class="logo">  <button class="catLogo" aria-label="abibia Logo" onclick="location.href='https://www.youtube.com/@abibia_'"> </button></div>
 <nav class="navigationBar" id="myTopnav" role="navigation">
     <a href="index.html">Home</a>
     <a href="galery.html">Gallery</a>
-    <a href="index.html#FAQ">FAQ</a>
-    <a href="Shop.html">Shop</a>
     <a href="index.html#about">About</a>
     <a href="index.html#contact">Contact</a>
     <a href="javascript:void(0);" class="icon" onclick="navigationBar()" aria-label="See more"></a>
 </nav>
 <body>
-<section id="Commission" class="Commission">
-    <h2 class="titles">Commission</h2>
+<div id="ClosedOverlay">
+    <div id="ClosedText">Commissions Closed</div>
+</div>
+<div style= "width: 100%;" id="offerBox">
+    <h2 class="titles" > Commission offers</h2>
+    <div class="offerContent" ID="offerButtons">
+
+        <button class="offerButton canvasB" type="button" aria-label="canvas">canvas painting <p class="red"> +100€</p> </button>
+        <button class="offerButton vtuberB" type="button" aria-label="vtuber">vtuber models <p class="red"> +500€</p> </button>
+        <button class="offerButton streamB" type="button" aria-label="emotes"> stream assets <p class="red">+10€</p> </button>
+        <button class="offerButton digitalB" type="button" aria-label="digital ilustrairon" >digital illustration <p class="red">+10€</p> </button>
+        <button class="offerButton blockmenchB" type="button" aria-label="blockbench">blockbench models <p class="red">+20€</p> </button>
+    </div>
+</div>
+
+<h2 class="titles">Latest work</h2>
+<div class="gallery">
+    insert gallery items here
+</div>
+<div id="reviews">
+    <h2 class="titles">Reviews</h2>
+    <div class="review-container">
+        <div class="review-content">
+            <p class="bold" role="heading" aria-level="3" >User Name</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
+
+        </div>
+        <div class="review-content">
+            <p class="bold" role="heading" aria-level="3" >User Name</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
+
+        </div>
+        <div class="review-content">
+            <p class="bold" role="heading"  aria-level="3" >User Name</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam tincidunt, nisl nisl tincidunt nisl, nec tincidunt nisl nisl nec.</p>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="how it works">
+
+    <h2 class="titles">How it works</h2>
+
+
+
+
+</div>
+</div>
+</section>
+
+
+
+<section id="FAQ">
+    <H1 class="titles"> Frequently Asked Questions </H1>
+    <div class="accordion-container">
+
+        <div class="accordion-item">
+            <button class="accordion">What is a Commission?</button>
+            <div class="panel">
+                <p>A commission is a service that allows you to work together with a professional artist to bring your ideas to life. <br>
+                    I will create a digital or physical product that you can use in your game, stream, or any other media privately or commercially. <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">How long does it take for my Commission to be ready?</button>
+            <div class="panel">
+                <p>Each Commission is unic and my take longer or shorter depending on addons, how busy I am, and other factors<br>
+                    A estimated time for the commission will be given in the checkout page. You can also check the status of your commission in the profile page.<br>
+                    If the Commission takes longer than the estimated time you are entitled 1 month to cancel your order and recive a 100% refund ...</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">How is the price Calculated?</button>
+            <div class="panel">
+                <p>The price is calculated as a sum of the materials (software, textures, sounds etc. for digital commissions), the selected addons, and a base Price. <br>
+                    The Base price a estimate of how much ours I will spend on the commission times my hourly rate of 15€. <br>
+                    price is them converted to your currency if necessary and complemented if you choose to have any extra revisions besides the ones given with the base product.  </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">Do I own the rights to the Piece?</button>
+            <div class="panel">
+                <p>Unless you explicitly ask for a copyright assignment during the commission processes, I, as creator of the art work, still hold all rights.<br><
+                    You still are the owner of the physical object itself. (the actual canvas, print, model files tc.) You have the right to possess it, display it and sell or give away that specific object to someone else <br>
+                    What you cannot do is reproduce the artwork, distribute copies, or create derivative works. Meaning, for example, to sell merchandise based on a product you purchased from me without the commercial license. </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">What if I don't like the finished product?</button>
+            <div class="panel">
+                <p>Before the finished product is sent to you (or have the watermark removed in case of a digital product) I will ask for your approval and last-minute revisions. <br>
+                    Deposits are non-refundable, and artworks that you have approved are also unrefundable.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">What should I consider when commissioning a VTuber model?</button>
+            <div class="panel">
+                <p>[placeholder text] 2d, 3d, equipment, software, pc requirements, future comercial use.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">What should I consider when commissioning a Painting?</button>
+            <div class="panel">
+                <p>[placeholder text] .</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">What should I consider when commissioning a Illustration?</button>
+            <div class="panel">
+                <p>[placeholder text]</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">What should I consider when commissioning a Stream Asset?</button>
+            <div class="panel">
+                <p>[placeholder text] </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">Can you ship the piece to XXX contry?</button>
+            <div class="panel">
+                <p>[placeholder text] </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th style="color: green; font-weight: bold;">DO'S </th>
+                <th style="color: darkred; font-weight: bold;">DONT'S </th>
+            </tr>
+            <tr>
+                <td>Comercial Work</td>
+                <td>NSFW </td>
+            </tr>
+            <tr>
+                <td>Fanart</td>
+                <td>Deadlines</td>
+            </tr>
+            <tr>
+                <td>Gore</td>
+                <td>Illegal Content</td>
+            </tr>
+            <tr>
+                <td>Furry Art</td>
+                <td>Discouts</td>
+            </tr>
+            <tr>
+                <td>Abstract Art</td>
+                <td>Not listed medium</td>
+            </tr>
+
+        </table>
+    </div>
 
 </section>
 
+    </body>
 <footer class="footer"  role="contentinfo">
     <p>Terms of service<br> privacy policy</p>
     <a href="https://www.youtube.com/@abibia_"
@@ -41,7 +204,5 @@
        aria-label="Visit our YouTube channel">
     </a>
 </footer>
-
-    </body>
 
 </html>

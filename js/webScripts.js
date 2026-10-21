@@ -77,10 +77,10 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Up
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; //  Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
 }
 
 function imageSwapAnimation() {
@@ -96,7 +96,7 @@ function imageSwapAnimation() {
     // Store all the image sources in an array
     const allSources = images.map(img => img.src);
 
-    // Add this line that was missing!
+
     images.forEach(img => {
         img.addEventListener('mouseenter', () => {
             // Fade out all images
@@ -125,4 +125,11 @@ function imageSwapAnimation() {
     });
 }
 
-la
+function OverlayToggle(toggle) {
+ if(toggle.value== "OFF") {
+     toggle.value == "ON"
+     document.getElementById("ClosedOverlay").style.display = "none";
+ } else {
+     toggle.value == "OFF"
+     document.getElementById("ClosedOverlay").style.display = "block";
+ }
